@@ -1,0 +1,30 @@
+{
+	"name": "directus-extension-static-auth",
+	"description": "Manage static token accounts in directus from the CLI",
+	"icon": "extension",
+	"version": "1.0.0",
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-custom-hook"
+	],
+	"type": "module",
+	"directus:extension": {
+		"type": "hook",
+		"path": "dist/index.js",
+		"source": "src/index.ts",
+		"host": "^10.3.0"
+	},
+	"scripts": {
+		"prepack": "directus-extension build --sourcemap",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link"
+	},
+	"devDependencies": {
+		"@directus/api": "^15.0.0",
+		"@directus/extensions-sdk": "10.3.0",
+		"@types/commander": "^2.12.2",
+		"@types/node": "^20.10.6",
+		"typescript": "^5.3.3"
+	}
+}
